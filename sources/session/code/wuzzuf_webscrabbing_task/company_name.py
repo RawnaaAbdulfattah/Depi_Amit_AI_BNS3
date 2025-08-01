@@ -3,6 +3,8 @@ with open("C:/Users/Computer Market/Desktop/Depi/Depi_Amit_AI_BNS3/sources/sessi
     content=file.read()
     soupy=BeautifulSoup(content,'lxml')
     info=soupy.find_all('div',class_='css-d7j1kk')
-    for company_info in info:
+    time=soupy.find_all('div',class_='css-do6t5g')
+    for company_info,announce_time in zip(info,time) :
         company_name=company_info.a.text
-        print(company_name)
+        company_location=company_info.span.text
+        print(f"The company name is:{company_name}and it's location is: {company_location} and the job is posted {announce_time.text}")

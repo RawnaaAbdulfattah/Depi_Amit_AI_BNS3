@@ -1,6 +1,6 @@
 selfPractise
-.venv
-trailing_system_project
+.venv/
+trailing_system_project/
 gameWithChatGPT
 selfPractise
 tk.py
